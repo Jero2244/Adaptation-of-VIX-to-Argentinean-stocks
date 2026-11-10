@@ -1,0 +1,11 @@
+id,measure,sample,value,limit,passed,if_it_fails
+B1,Sessions in one source only,all overlap,0.0,3.0,True,"Find the cause, fix the reader, rerun, log"
+B2,"Signed median log(Alpaca / official), bp",all overlap,0.0,5.0,True,"Find the cause, fix the reader, rerun, log"
+B2,"Signed median log(Alpaca / official), bp",2018-05 to 2019-07,0.0,5.0,True,"Find the cause, fix the reader, rerun, log"
+B3,"Absolute median, bp",all overlap,0.0,10.0,True,"Stage 4 stops, and the user decides"
+B3,"Absolute median, bp",2018-05 to 2019-07,0.0,10.0,True,"Stage 4 stops, and the user decides"
+B4,"Absolute 99th percentile, bp",all overlap,0.0,100.0,True,"Stage 4 stops, and the user decides"
+B4,"Absolute 99th percentile, bp",2018-05 to 2019-07,4.33464722140249,100.0,True,"Stage 4 stops, and the user decides"
+B5,Median absolute log(RV30 ratio),all overlap,0.0,0.05,True,"Stage 4 stops, and the user decides"
+B5,Median absolute log(RV30 ratio),2018-05 to 2019-07,0.0,0.05,True,"Stage 4 stops, and the user decides"
+B6,"Change in b, pre-break primary rows, Alpaca RV and HAR",before 2025-03,0.0002142280442413158,0.03,True,"No verdict with Alpaca RV. The user drops Stage 5, or reports the test as descriptive only"

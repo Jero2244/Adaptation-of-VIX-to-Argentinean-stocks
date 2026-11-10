@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "pipeline": {
+    "inner": {
+      "mean": 0.684451536643026,
+      "simulation_se": 0.002209720105621593,
+      "nominal": 0.6826894921370859,
+      "passed": true
+    },
+    "outer": {
+      "mean": 0.954725768321513,
+      "simulation_se": 0.0010207928084160045,
+      "nominal": 0.9544997361036416,
+      "passed": true
+    },
+    "down_tail": {
+      "mean": 0.02251773049645387,
+      "simulation_se": 0.0006701393726568488,
+      "nominal": 0.022750131948179195,
+      "passed": true
+    },
+    "up_tail": {
+      "mean": 0.022756501182033078,
+      "simulation_se": 0.0008004584627055041,
+      "nominal": 0.022750131948179195,
+      "passed": true
+    },
+    "mean_z2": {
+      "mean": 0.9928725005823195,
+      "simulation_se": 0.008371398498938934,
+      "nominal": 1.0,
+      "passed": true
+    },
+    "mean_abs_z": {
+      "mean": 0.7950691125256587,
+      "simulation_se": 0.003391507499592084,
+      "nominal": 0.7978845608028654,
+      "passed": true
+    }
+  },
+  "alignment_failures": []
+}

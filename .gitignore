@@ -1,0 +1,41 @@
+# Whitelist. Everything is ignored unless a rule below allows it.
+# Published: code, methodology documents, and aggregated results (coefficients, intervals, counts).
+# Not published: raw data, tables derived from quotes (per-day or per-quote values), figures, PDFs, logs.
+*
+!*/
+!.gitignore
+
+# Code and methodology
+!*.py
+!*.md
+
+# Aggregated results of the study
+!reports/coverage_*.csv
+!reports/stage3_*.csv
+!reports/stage4_*.csv
+!reports/*.json
+!reports/stage5_console.txt
+# Per-date values derived from quotes
+reports/stage3_events.csv
+reports/stage3_placebos.csv
+
+# Aggregated results of the audit and the post-audit checks
+!audit/a05_american_bias.csv
+!fixes/f04_*.csv
+!fixes/f05_deam_synthetic.csv
+!fixes/f08_rv_har.csv
+!fixes/f09_*.csv
+!fixes/f15_subsamples.csv
+
+# Folders that never go public
+databento_ggal_20261031/*
+!databento_ggal_20261031/README.md
+data/
+fixes/data/
+writeup/backup_pre_audit_2026-11-10/
+writeup/status_before_step_b/
+writeup/figures/
+review/pre_fix2_backup/
+review/pre_fix3_backup/
+review/pre_stage4_backup/
+__pycache__/

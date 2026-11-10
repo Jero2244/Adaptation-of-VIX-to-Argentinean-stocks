@@ -1,0 +1,14 @@
+variant,2018,2019,2020,2021,2022,2023,2024,2025,2026
+COMBINED + 7d floor (all four),30,43,110,130,185,122,78,85,97
+COMBINED strict+spread.50+Tier1,17,34,109,130,185,116,61,68,89
+"F2 American tree, all dividends",0,0,0,0,0,0,0,0,0
+"F2 American tree, confirmed only",0,0,0,0,0,0,0,0,0
+F3 spread <= .25 (sens.),12,11,70,90,151,130,60,75,128
+F3 spread <= .50,2,1,17,9,36,42,22,9,20
+F3 spread <= 1.00 (sens.),0,0,1,0,3,8,1,1,4
+F4 Tier 1 only,17,34,108,130,171,61,18,14,8
+F7 strict last row,0,0,0,0,0,1,0,4,4
+F9 min near term 7d,27,34,20,13,19,25,37,40,34
+all four + American tree,30,43,112,130,187,122,78,86,97
+"all four, spread .25 (sens.)",38,48,131,138,193,165,106,142,157
+"all four, spread 1.00 (sens.)",30,43,109,130,174,76,48,56,43

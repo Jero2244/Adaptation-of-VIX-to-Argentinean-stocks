@@ -1,0 +1,7 @@
+iv_series,interval,draws,nominal,measured_coverage,mean_width,sd_of_b_over_mean_width_implied_se
+stored ATM30,"bootstrap, 21-session blocks",400,0.95,0.87,0.5340319610446231,1.2591367872628805
+stored ATM30,"bootstrap, 63-session blocks",400,0.95,0.8925,0.5880458398684411,1.1434810726249804
+stored ATM30,b +- 1.96 Newey-West(21),400,0.95,0.8775,0.5399449666450308,1.2453478211002245
+all four fixes,"bootstrap, 21-session blocks",400,0.95,0.8925,0.7318593520901612,1.198210016403735
+all four fixes,"bootstrap, 63-session blocks",400,0.95,0.9125,0.7932954964809567,1.1054155862010868
+all four fixes,b +- 1.96 Newey-West(21),400,0.95,0.8975,0.7440389473793034,1.178595837438243

@@ -1,0 +1,184 @@
+{
+  "note": "Simulated prices only. Constant vol is the kindest case for the intervals. The wandering case has a slow implied-vol error, and real data can differ from both.",
+  "pipeline": {
+    "inner": {
+      "mean": 0.684451536643026,
+      "simulation_se": 0.002209720105621593,
+      "nominal": 0.6826894921370859,
+      "passed": true
+    },
+    "outer": {
+      "mean": 0.954725768321513,
+      "simulation_se": 0.0010207928084160045,
+      "nominal": 0.9544997361036416,
+      "passed": true
+    },
+    "down_tail": {
+      "mean": 0.02251773049645387,
+      "simulation_se": 0.0006701393726568488,
+      "nominal": 0.022750131948179195,
+      "passed": true
+    },
+    "up_tail": {
+      "mean": 0.022756501182033078,
+      "simulation_se": 0.0008004584627055041,
+      "nominal": 0.022750131948179195,
+      "passed": true
+    },
+    "mean_z2": {
+      "mean": 0.9928725005823195,
+      "simulation_se": 0.008371398498938934,
+      "nominal": 1.0,
+      "passed": true
+    },
+    "mean_abs_z": {
+      "mean": 0.7950691125256587,
+      "simulation_se": 0.003391507499592084,
+      "nominal": 0.7978845608028654,
+      "passed": true
+    }
+  },
+  "alignment_failures": [],
+  "coverage_full_sample": {
+    "constant": {
+      "sessions": 2107,
+      "true_inner": 0.6826894921370859,
+      "cover21": 0.9033333333333333,
+      "cover63": 0.9233333333333333,
+      "width21": 0.1079025075146337,
+      "width63": 0.11678935295048248,
+      "verdict_fires": 0.06666666666666667
+    },
+    "wandering": {
+      "sessions": 2107,
+      "true_inner": 0.68633,
+      "cover21": 0.86,
+      "cover63": 0.89,
+      "width21": 0.11086663502610344,
+      "width63": 0.126328152191109,
+      "verdict_fires": 0.1
+    }
+  },
+  "forward_power": [
+    {
+      "sessions": 252,
+      "no_error": {
+        "sessions": 252,
+        "true_inner": 0.6826894921370859,
+        "cover21": 0.8466666666666667,
+        "cover63": 0.8133333333333334,
+        "width21": 0.28959193121693116,
+        "width63": 0.26872552910052905,
+        "verdict_fires": 0.13333333333333333
+      },
+      "bands_25pct_too_wide": {
+        "sessions": 252,
+        "true_inner": 0.79222,
+        "cover21": 0.8666666666666667,
+        "cover63": 0.83,
+        "width21": 0.25630158730158725,
+        "width63": 0.24548181216931209,
+        "verdict_fires": 0.35
+      },
+      "wandering_error": {
+        "sessions": 252,
+        "true_inner": 0.68633,
+        "cover21": 0.7866666666666666,
+        "cover63": 0.7366666666666667,
+        "width21": 0.2909411375661375,
+        "width63": 0.28786607142857135,
+        "verdict_fires": 0.20333333333333334
+      }
+    },
+    {
+      "sessions": 504,
+      "no_error": {
+        "sessions": 504,
+        "true_inner": 0.6826894921370859,
+        "cover21": 0.8566666666666667,
+        "cover63": 0.8633333333333333,
+        "width21": 0.21337863756613748,
+        "width63": 0.21944427910052905,
+        "verdict_fires": 0.11333333333333333
+      },
+      "bands_25pct_too_wide": {
+        "sessions": 504,
+        "true_inner": 0.79222,
+        "cover21": 0.8566666666666667,
+        "cover63": 0.87,
+        "width21": 0.18813525132275127,
+        "width63": 0.1922855489417989,
+        "verdict_fires": 0.5133333333333333
+      },
+      "wandering_error": {
+        "sessions": 504,
+        "true_inner": 0.68633,
+        "cover21": 0.7866666666666666,
+        "cover63": 0.83,
+        "width21": 0.21832390873015867,
+        "width63": 0.23409441137566134,
+        "verdict_fires": 0.16
+      }
+    },
+    {
+      "sessions": 756,
+      "no_error": {
+        "sessions": 756,
+        "true_inner": 0.6826894921370859,
+        "cover21": 0.86,
+        "cover63": 0.8666666666666667,
+        "width21": 0.1761618165784832,
+        "width63": 0.18460537918871248,
+        "verdict_fires": 0.12333333333333334
+      },
+      "bands_25pct_too_wide": {
+        "sessions": 756,
+        "true_inner": 0.79222,
+        "cover21": 0.8733333333333333,
+        "cover63": 0.8866666666666667,
+        "width21": 0.1572167107583774,
+        "width63": 0.1642002865961199,
+        "verdict_fires": 0.6266666666666667
+      },
+      "wandering_error": {
+        "sessions": 756,
+        "true_inner": 0.68633,
+        "cover21": 0.82,
+        "cover63": 0.8533333333333334,
+        "width21": 0.18028913139329802,
+        "width63": 0.19778527336860668,
+        "verdict_fires": 0.14666666666666667
+      }
+    },
+    {
+      "sessions": 1260,
+      "no_error": {
+        "sessions": 1260,
+        "true_inner": 0.6826894921370859,
+        "cover21": 0.88,
+        "cover63": 0.91,
+        "width21": 0.13859166666666659,
+        "width63": 0.14813181216931212,
+        "verdict_fires": 0.08666666666666667
+      },
+      "bands_25pct_too_wide": {
+        "sessions": 1260,
+        "true_inner": 0.79222,
+        "cover21": 0.93,
+        "cover63": 0.95,
+        "width21": 0.12314609788359784,
+        "width63": 0.13296739417989412,
+        "verdict_fires": 0.8466666666666667
+      },
+      "wandering_error": {
+        "sessions": 1260,
+        "true_inner": 0.68633,
+        "cover21": 0.8466666666666667,
+        "cover63": 0.9033333333333333,
+        "width21": 0.14306402116402112,
+        "width63": 0.1619213624338624,
+        "verdict_fires": 0.10333333333333333
+      }
+    }
+  ]
+}

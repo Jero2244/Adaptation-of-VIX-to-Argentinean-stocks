@@ -1,0 +1,11 @@
+{
+  "written_at": "2026-11-05T15:03:51.363726+00:00",
+  "files": {
+    "calib_core.py": "a0ed879e6e70e30fe59d23d3064c768b5d9e20faa0b79695ee4a7475fb63ad76",
+    "calib_run.py": "b340ed93b6afd58467ad3afa32437ba039b944e749d0c6fa2c6aaec04e0314ed",
+    "calib_synthetic.py": "91552048b20d2c8acd8788633228643fefe5169a6b873b9fa83ff77548a4290e",
+    "test_calib.py": "f6387b4f43c7bd6db3c4f50505297cac6d2d9ea633d14ff1fd673e647cec2817",
+    "CALIBRATION_PLAN.md, text before the post-result log": "425fa2c026cc5f76eb0e5c59ca943ef87ea53c6e023e17f798f5a27f71840c4f"
+  },
+  "verdict_horizon": null
+}

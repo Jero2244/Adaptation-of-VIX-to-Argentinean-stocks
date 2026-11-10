@@ -1,0 +1,11 @@
+{
+  "verdict_horizon": "2029-10-30",
+  "months": 36,
+  "rule": "Origins from 2026-10-30 through the first origin on or after 2029-10-30, with complete windows. Events and Tier 2 days stay in.",
+  "approved_by": "user",
+  "approved_on": "2026-11-05",
+  "recorded_at": "2026-11-05T15:52:33.537041+00:00",
+  "manifest_sha256": "a8e55a47b1a3bc14f6f329e510e7fb41c44e887a93e9671b4368f06ab02ecb82",
+  "plan_rules_sha256_before": "425fa2c026cc5f76eb0e5c59ca943ef87ea53c6e023e17f798f5a27f71840c4f",
+  "plan_rules_sha256_after": "6f141554eb84e4d58aa3f68b39bbd323c031ebd543071d537f5b294445945a15"
+}

@@ -1,0 +1,190 @@
+{
+  "floor": {
+    "origins": 455,
+    "filled_spans": 26,
+    "passed": true
+  },
+  "sessions": 585,
+  "rule1": {
+    "n": 455,
+    "b": 0.28101692130028233,
+    "low21": -0.20861996321348522,
+    "high21": 0.8449357473226263,
+    "se21": 0.2722996365260813,
+    "low63": -0.2316171504658123,
+    "high63": 0.9365202465614388,
+    "se63": 0.2848246357279737
+  },
+  "no_events": {
+    "n": 418,
+    "b": 0.3512505932861141,
+    "low21": -0.1210017814913203,
+    "high21": 0.9164570850501541,
+    "se21": 0.2665896387805728,
+    "low63": -0.1680112052392809,
+    "high63": 0.9250089062275219,
+    "se63": 0.27297863093703995
+  },
+  "race": {
+    "scored": 271,
+    "first_scored": "2017-01-03",
+    "clark_west": {
+      "mean": -0.004072149814339834,
+      "t": -0.29970553203742495,
+      "low": -0.03228583788250932,
+      "high": 0.02022799674936829
+    },
+    "clark_west_block63": {
+      "mean": -0.004072149814339834,
+      "t": -0.2700668967572282,
+      "low": -0.03560186470914062,
+      "high": 0.02249214971117452
+    },
+    "qlike_duan": {
+      "mean": 0.006588044552917055,
+      "t": 0.7610957930867511,
+      "low": -0.008195542884329535,
+      "high": 0.024938910384289095
+    },
+    "qlike_no_factor": {
+      "mean": 0.011308158083171753,
+      "t": 1.1023737905803523,
+      "low": -0.006522675182995677,
+      "high": 0.033221090700562395
+    },
+    "mean_target": 0.11283529382005542,
+    "mean_forecast": {
+      "duan_har": 0.09754914085638491,
+      "duan_har_atm": 0.09297779549846256,
+      "no_factor_har": 0.08863378469385756,
+      "no_factor_har_atm": 0.08468193417019969
+    }
+  },
+  "decision": {
+    "outcome": "Inconclusive",
+    "rule1": false,
+    "also_out_of_sample": false,
+    "usable_gain": false
+  },
+  "line": "Inconclusive. 2016-01 to 2018-04 only. The \"95%\" intervals really cover about 80% to 91% in simulation. The sign of b is positive.",
+  "fixed_steps": [
+    {
+      "step": 22,
+      "samples": 22,
+      "median_n": 21.0,
+      "mean_b": 0.396071389605013,
+      "min_b": -0.1870246287134389,
+      "max_b": 0.9848832979899106,
+      "median_t": 0.6879667662379025
+    },
+    {
+      "step": 23,
+      "samples": 23,
+      "median_n": 20.0,
+      "mean_b": 0.38400103805417357,
+      "min_b": -0.17713817098115484,
+      "max_b": 1.5085980381158437,
+      "median_t": 0.6424455811032683
+    }
+  ],
+  "tier1": {
+    "n": 245,
+    "b": 0.41140322624416203,
+    "low21": -0.10955854615311642,
+    "high21": 1.1622859352167982,
+    "se21": 0.32857706224898225,
+    "low63": -0.02609513511273493,
+    "high63": 1.367288284737959,
+    "se63": 0.354392570667067
+  },
+  "upper_against": {
+    "limit_no_events": 0.37,
+    "limit_with_events": 0.525,
+    "max_upper": 0.9365202465614388
+  },
+  "each_event_dropped": {
+    "2017-08-14": {
+      "n": 437,
+      "b": 0.36170846357247205,
+      "low21": -0.10823398571607305,
+      "high21": 0.9192521054832398,
+      "se21": 0.26243183792663954,
+      "low63": -0.16020191769391573,
+      "high63": 0.9719898863611987,
+      "se63": 0.27144145374908024
+    },
+    "2017-10-23": {
+      "n": 436,
+      "b": 0.2624350444152501,
+      "low21": -0.2467917903305866,
+      "high21": 0.8486943639530894,
+      "se21": 0.28270388248232103,
+      "low63": -0.24355227089566303,
+      "high63": 0.9097062271085908,
+      "se63": 0.2858185862503908
+    }
+  },
+  "counts": {
+    "alpaca_sessions": 585,
+    "option_sessions": 585,
+    "only_alpaca": 0,
+    "only_options": 0,
+    "largest_calendar_gap": 4.0,
+    "first_session": "2016-01-04",
+    "last_session": "2018-04-30",
+    "last_window_end": "2018-04-28"
+  },
+  "step_a": {
+    "sessions": 585,
+    "atm30_days": 492,
+    "duplicate_quotes": 0,
+    "blank_rate_sessions": 0,
+    "status_by_year": {
+      "2016": {
+        "ok": 200,
+        "near: no two-sided pair": 38,
+        "no listed bracket": 14
+      },
+      "2017": {
+        "ok": 214,
+        "near: no two-sided pair": 25,
+        "no listed bracket": 12
+      },
+      "2018": {
+        "ok": 78,
+        "no listed bracket": 3,
+        "near: no two-sided pair": 1
+      }
+    },
+    "tier_counts": {
+      "1.0": 273,
+      "2.0": 219
+    },
+    "unmatched_quotes": 0,
+    "other_roots": 0,
+    "last_row_null_bids": 0,
+    "median_rows_per_session": 29640.0,
+    "median_null_bid_share": 0.0,
+    "first_bars": {
+      "09:31": 585
+    },
+    "last_bars": {
+      "16:00": 582,
+      "13:15": 3
+    }
+  },
+  "history": {
+    "attempts": [
+      {
+        "started": "2026-11-05T14:02:04.116103+00:00",
+        "manifest_sha256": "9214a2205f7a6078af41c3d8650b77a1d53bfa772bf14228be6d9d21ae883abc",
+        "crash_fix_note": null
+      }
+    ],
+    "refreezes": []
+  },
+  "crash_fix_note": null,
+  "disclosure": "The user states no contact with 2016-2018 prices. The access log shows that the study printed dividend rows, bar counts, and dates for the period, with no prices or returns. Code parses of the Alpaca file, the cash file, and the local dividend file held locked rows in memory before a filter removed them, and code also parsed the option condition file, which holds locked dates and no prices. No locked value was shown or written. The agents report no read of locked values, and nobody audited this. An agent that looked for a rights date read public filings and search summaries. It saw the 2017 offering price and one ADS sale price, and it passed neither to the study. A rights offering ended on 2017-09-26. Its final prospectus supplement, read through a summarizing tool, says that the rights were not made available to ADS holders, so the cash rows hold no entry for it. Nobody could read the Nasdaq or depositary records, so a depositary sale of those rights is not excluded. The local ex-date is unknown, so the ADS close can show a step on that date with no flag. Alpaca passed its limits on open dates, which does not prove the same fit in 2016-2017. The test falls entirely before the 2025-03 format break.",
+  "manifest_sha256": "9214a2205f7a6078af41c3d8650b77a1d53bfa772bf14228be6d9d21ae883abc",
+  "finished": "2026-11-05T14:24:07.768276+00:00"
+}
