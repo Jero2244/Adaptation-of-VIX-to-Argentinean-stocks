@@ -123,7 +123,7 @@ p.table([["Event", "Origins", "Inner", "Outer", "Mean z", "Mean z²", "Share of 
 p.bullets([
     f"<b>Centre of the distribution.</b> Median |z| is {shape['median_abs_z_over_normal']:.3f} times its normal value, so the centre shows no level error. The excess in mean z² comes from the tails.",
     f"<b>Without the 2019 PASO windows.</b> On {paso['n']:,} origins, mean z² is {paso['mean_z2']['value']:.2f} ({nspan(paso['mean_z2'])}), outer is {pct(paso['outer']['value'])}, and the down-tail breach is {pct(paso['down_tail']['value'])}. That one event is {pct(POST['by_event']['2019 PASO']['share_of_all_z2'])} of all z².",
-    "<b>Events are mixed.</b> Three of nine events stayed inside the inner band on nearly all origins, while the 2019 PASO and both 2025 events did not. So ATM30 does not fail on all events.",
+    "<b>Events are mixed.</b> Five of nine events had an inner rate of 82% or more (the 2019 general and the 2023 PASO and general at 100%, the 2021 PASO at 88%, and the 2021 midterm at 82%). The 2019 PASO, the 2023 runoff, and both 2025 events did not: their inner rates are 0%, 10%, 0%, and 12%. So ATM30 does not fail on all events.",
 ])
 
 p.add("7. Probabilities and benchmarks", "h1")
@@ -185,7 +185,7 @@ p.bullets([
 
 p.add("12. Integrity record", "h1")
 p.bullets([
-    f"<b>Freeze.</b> The manifest hash is {manifest_hash}. This folder has no git, so the manifest replaces the commit in C0. File times and a code guard fit the order \"rules, then results\", but they cannot prove it. The owner was asked to save this hash, and no comparison has been made.",
+    f"<b>Freeze.</b> The manifest hash is {manifest_hash}. The folder had no git at C0, so the manifest replaced the commit. It is now a git repository, but its first commit (22368c5) came after the results. So git history cannot show the order \"rules, then results\" either. File times and a code guard fit this order, but they cannot prove it. The owner was asked to save this hash, and no comparison has been made.",
     "<b>Study freeze.</b> The main study's manifest shows no differences, and its Stage 5 files did not change. New code sits in " + I % "calibration/" + ", outside the folders that " + I % "freeze.py" + " hashes.",
     "<b>Horizon.</b> The owner chose 36 months after seeing the open-data results and the power table, and before any forward data existed. Recording it changed the plan text, so " + I % "calib_run.py" + " would now report the plan as changed. " + I % "reports/calib_horizon.json" + " holds the hash before and after. The manifest is unchanged.",
     "<b>Adversarial review.</b> One independent agent reviewed the work (" + I % "review/calibration_review/report.md" + "). It reran C1, C2, C3, and the base-rate table with zero differences, and it found no formula error, look-ahead, or row mismatch. It found that the first main reading overreached. That reading is rewritten here. The review has not seen this paper.",
@@ -209,16 +209,16 @@ p.add("Reproduction", "h1")
 p.add(f"Environment: Conda {I % 'py4fi'}. Rules: {I % 'CALIBRATION_PLAN.md'}. Tests: {I % 'python calibration/test_calib.py'}. Results: {I % 'reports/calib_results.json'}. Descriptive report: {I % 'reports/calib_descriptive.md'}. These papers: {I % 'writeup/build_calibration_plain.py'} and {I % 'writeup/build_calibration_technical.py'}, which need {I % 'reportlab'} on the path. The Databento data is licensed, so these results and files stay local unless the license permits otherwise.")
 
 p.add("References", "h1")
-p.add("These citations come from memory and were not checked against the sources. Verify them before any submission.", "caption")
+p.add("All references were checked on 2026-11-11. Journal articles were matched to Crossref records. Politis and Romano (1992) is a book chapter with no online record found. Three independent bibliographies give the same entry for it.", "caption")
 for reference in (
-    "Black, F. (1976). The pricing of commodity contracts. <i>Journal of Financial Economics</i>, 3.",
-    "Brier, G. (1950). Verification of forecasts expressed in terms of probability. <i>Monthly Weather Review</i>, 78.",
-    "Corsi, F. (2009). A simple approximate long-memory model of realized volatility. <i>Journal of Financial Econometrics</i>, 7.",
-    "Diebold, F., Gunther, T., and Tay, A. (1998). Evaluating density forecasts with applications to financial risk management. <i>International Economic Review</i>, 39.",
-    "Duan, N. (1983). Smearing estimate: a nonparametric retransformation method. <i>Journal of the American Statistical Association</i>, 78.",
-    "Gneiting, T., and Raftery, A. (2007). Strictly proper scoring rules, prediction, and estimation. <i>Journal of the American Statistical Association</i>, 102.",
-    "Jordan, A., Krüger, F., and Lerch, S. (2019). Evaluating probabilistic forecasts with scoringRules. <i>Journal of Statistical Software</i>, 90.",
-    "Politis, D., and Romano, J. (1992). A circular block-resampling procedure for stationary data. In R. LePage and L. Billard (eds.), <i>Exploring the Limits of Bootstrap</i>. Wiley.",
+    "Black, F. (1976). The pricing of commodity contracts. <i>Journal of Financial Economics</i>, 3(1-2), 167-179.",
+    "Brier, G. (1950). Verification of forecasts expressed in terms of probability. <i>Monthly Weather Review</i>, 78(1), 1-3.",
+    "Corsi, F. (2009). A simple approximate long-memory model of realized volatility. <i>Journal of Financial Econometrics</i>, 7(2), 174-196.",
+    "Diebold, F., Gunther, T., and Tay, A. (1998). Evaluating density forecasts with applications to financial risk management. <i>International Economic Review</i>, 39(4), 863-883.",
+    "Duan, N. (1983). Smearing estimate: a nonparametric retransformation method. <i>Journal of the American Statistical Association</i>, 78(383), 605-610.",
+    "Gneiting, T., and Raftery, A. (2007). Strictly proper scoring rules, prediction, and estimation. <i>Journal of the American Statistical Association</i>, 102(477), 359-378.",
+    "Jordan, A., Krüger, F., and Lerch, S. (2019). Evaluating probabilistic forecasts with scoringRules. <i>Journal of Statistical Software</i>, 90(12), 1-37.",
+    "Politis, D., and Romano, J. (1992). A circular block-resampling procedure for stationary data. In R. LePage and L. Billard (eds.), <i>Exploring the Limits of Bootstrap</i>, 263-270. Wiley.",
 ):
     p.add(reference, "reference")
 p.build()

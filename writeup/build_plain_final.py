@@ -29,7 +29,7 @@ p = c.Paper("Sans", 10.5, "Can option prices see bumpy days coming?", f.FOOTER, 
 p.add("Can option prices see bumpy days coming?", "title")
 p.add("The full GGAL volatility study, explained simply. Final report draft of 2026-11-05, written with Claude Code from the project files.", "subtitle")
 p.add("<b>Revision history.</b> " + f.REVISION_NOTE + " The test result is unchanged. Section 10 adds checks made after the test.", "subtitle")
-p.callout("<b>The short version.</b> We asked if option prices warn us about big future moves in the GGAL stock, beyond what recent moves already tell us. The data that we used to build the method says \"yes, but unevenly\". Then we ran a fair one-time test on older data that the method had never used. <b>The test result is \"Inconclusive\".</b> The score was positive, but the data was too limited to separate a real effect from no effect. So the idea is neither proved nor rejected. <b>Read three numbers together.</b> The score b is .62 on all open data. It is .37 on ordinary days before 2025, and there the range includes zero. It is .28 in the fair test. The good score is fragile.")
+p.callout("<b>The short version.</b> We asked if option prices warn us about big future moves in the GGAL stock, beyond what recent moves already tell us. The data that we used to build the method says \"yes, but unevenly\". Then we ran a one-time test on older data that had not built the method. The test is backward in time, and we designed the method after we saw the newer data. <b>The test result is \"Inconclusive\".</b> The score was positive, but the data was too limited to separate a real effect from no effect. So the idea is neither proved nor rejected. <b>Read three numbers together.</b> The score b is .62 on all open data. It is .37 on ordinary days before 2025, and there the range includes zero. It is .28 in the fair test. The good score is fragile.")
 
 p.add("1. The big question", "h1")
 p.add("Think of a weather forecast. To guess next month's storms, you can look at last week's weather. You can also look at what storm insurance costs today. If the insurance is expensive, the people who sell it probably expect storms.")
@@ -43,7 +43,7 @@ p.table([
     ["Option", "A contract that pays if the price moves far enough. It works like insurance."],
     ["ATM30", "Our gauge: the bumpiness that near-the-money options imply for the next 30 days."],
     ["b", "Our main score. If b is 0, option prices add nothing beyond the recent past. If b is .62 and the option gauge for variance is 10% higher, the next 30 days average about 6% higher variance, with the recent past held equal."],
-    ["Interval", "A range of values that fits the data. If it includes 0, we cannot rule out \"no added information\". We call the ranges \"95%\" ranges, but in simulation they hold the true value only about 87% to 91% of the time, so they are too narrow."],
+    ["Interval", "A range of values that fits the data. If it includes 0, we cannot rule out \"no added information\". We call the ranges \"95%\" ranges, but in simulation they hold the true value only about 80% to 91% of the time, so they are too narrow."],
     ["PASO", "Argentina's primary election. The 2019 PASO caused a huge crash in GGAL."],
     ["Open data", "Data from 2018-05 to 2026-10. We looked at it and used it to build the method."],
     ["Test data", "Data from 2016-01 to 2018-04. We kept it locked until the final test."],
@@ -130,7 +130,7 @@ p.bullets([
 p.add("10. Checks after the audit", "h1")
 p.callout("<b>This is extra exploration on the open data, done after the one-time test.</b> It does not replace or change the test result.", edge=c.ORANGE)
 p.add("We re-ran the open-data score with stricter rules for the option quotes. The score rose from .62 to .85, but only because the rules drop about half of the days. The old gauge gives almost the same .84 on the days that stay. So the rise comes from which days remain, and not from a better measure. A stronger model of past moves lowers the score a little, from .62 to .61, and a better pricing method for American options changes nothing (.62).")
-p.add("The checks also show weak spots. The \"95%\" ranges really hold the true value only about 87% to 91% of the time. The score is large after 2025 and weaker before. A test of whether option prices match later bumpiness one for one also fails.")
+p.add("The checks also show weak spots. The \"95%\" ranges really hold the true value only about 80% to 91% of the time in the study's own simulation, and 87% to 91% in a later one. The score is large after 2025 and weaker before. A test of whether option prices match later bumpiness one for one also fails.")
 p.callout("<b>What to remember.</b> Option prices look useful in the data that taught us the method, mostly around elections and in recent years. The one fair test could not say yes or no. Any change to the method from now on is new exploration, and it does not count as a second test of this period.")
 p.build()
 print("plain final written", medians)

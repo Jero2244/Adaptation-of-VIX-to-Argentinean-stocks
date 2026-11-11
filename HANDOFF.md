@@ -28,7 +28,7 @@ Last updated 2026-11-05. Read this page first, then `PROTOCOL.md`, then `review/
 - The Step A and Step B runs are not in the access log in `PROTOCOL.md`, because an edit would change a frozen file.
 - The session added the backward-test limit to `writeup/` and this page before the run.
 
-**Stage 6: drafts are written.** The final report drafts are `writeup/GGAL_study_plain_final.pdf` and `writeup/GGAL_study_technical_final.pdf`. The user has not reviewed them yet. The papers from before Step B are out of date: they are in `writeup/status_before_step_b/`, and `writeup/GGAL_study_technical_version.pdf` is one more copy that a program held open, so it can be deleted. The user still needs to compare their saved hash, and to verify the references, which come from memory.
+**Stage 6: drafts are written.** The final report drafts are `writeup/GGAL_study_plain_final.pdf` and `writeup/GGAL_study_technical_final.pdf`. The user has not reviewed them yet. The papers from before Step B are out of date: they are in `writeup/status_before_step_b/`, and `writeup/GGAL_study_technical_version.pdf` is one more copy that a program held open, so it can be deleted. The user still needs to compare their saved hash. The references were verified on 2026-11-11.
 
 **Done on 2026-11-05, with the user's approval:**
 - **No-forward check:** The run stops only if the close is above .15 from the nearest forward on both sides and also above .15 from both adjacent closes.
@@ -60,10 +60,10 @@ Last updated 2026-11-05. Read this page first, then `PROTOCOL.md`, then `review/
 
 - **User decision:** the user chose all the proposed options in the plan. The plan proposes no horizon value.
 - **Main reading:** pooled coverage is near nominal (inner 69.6%, outer 93.8%), but this hides offsetting errors. The inner rate is 50.3% in the lowest ATM30 quintile (post-result). All results are exploratory.
-- **Freeze:** `reports/calib_freeze_manifest.json`, hash `a8e55a47b1a3bc14f6f329e510e7fb41c44e887a93e9671b4368f06ab02ecb82`. This folder has no git, so the manifest replaces the commit in C0. `calib_run.py` checks this manifest.
+- **Freeze:** `reports/calib_freeze_manifest.json`, hash `a8e55a47b1a3bc14f6f329e510e7fb41c44e887a93e9671b4368f06ab02ecb82`. The folder had no git at C0, so the manifest replaced the commit. It is now a git repository, with a first commit after the results. `calib_run.py` checks this manifest.
 - **Code:** `calibration/`. Do not put these scripts in the root or `tests/`, because `freeze.py` would then report a change.
 - **Horizon:** 36 months, recorded in `reports/calib_horizon.json`. The verdict uses origins from 2026-10-30 through the first origin on or after 2029-10-30, so the earliest verdict is about 2029-11-29. The manifest is unchanged. The plan text changed once, so `calib_run.py` now reports the plan as changed. That is expected.
-- **Papers:** `writeup/GGAL_calibration_plain.pdf` and `writeup/GGAL_calibration_technical.pdf`. `build_calibration_plain.py` and `build_calibration_technical.py` rebuild them, and they stop if a stated claim no longer fits the result files. They need `reportlab`, which is not in `py4fi` by design. Keep them local. The references come from memory and are unverified.
+- **Papers:** `writeup/GGAL_calibration_plain.pdf` and `writeup/GGAL_calibration_technical.pdf`. `build_calibration_plain.py` and `build_calibration_technical.py` rebuild them, and they stop if a stated claim no longer fits the result files. They need `reportlab`, which is not in `py4fi` by design. Keep them local. The references were verified on 2026-11-11.
 - **Review:** `review/calibration_review/report.md`. The main reading was rewritten after this review. The review did not see the papers.
 - **Before any forward run:** fix `forward_verdict`, and write a loader for dates after 2026-10-29. See the post-result log in `CALIBRATION_PLAN.md`.
 - **Not run:** the American-exercise cut, because the tree sensitivity is not done.
@@ -302,7 +302,7 @@ The drafts in `writeup/` wait for the user's review. The final paper must includ
 
 - The test is backward. No later price enters it, but the method, the rules, and the .37 limit came after contact with 2018-2026. So it measures fit on unseen older data, and it is not a real-time simulation. The write-up must state this. The user discussed this on 2026-11-05 and continued.
 - A forward test on data from after 2026-10-29 would avoid this limit. It is not in the plan, and early results would have low power.
-- Review 2022-07-08. The forward is more than 5% below the stock mid, with no dividend to explain it.
+- 2022-07-08 is explained (`audit/AUDIT_REPORT.md`): the near term had one pair at strike 7.5, with wide quotes. The low forward is quote noise. `reports/stage2_findings.md` still lists it as open, and it is outdated.
 - The spread gradient has no proved cause, and persistent quote error is untested. See `reports/stage3_findings.md`.
 - Nobody can yet separate the 2025 quote format break from a real market change.
 - Fixed-step samples, Clark-West, and same-row training are now in the study code. The other review checks (other level rules, 5-minute measures) are not. Their scripts are in `review/`.
@@ -313,4 +313,4 @@ The drafts in `writeup/` wait for the user's review. The final paper must includ
 - The 2016 and 2017 dividends use Alpaca's rate and date, with no record date or tax basis.
 - The plan's question to Databento on how early cbbo-1m bars are built has no answer yet.
 - Stage 1 did not reconcile the row counts with the decoded inventory.
-- This folder is not a git repository, so there is no version history. `reports/freeze_manifest.json` shows later changes to frozen files, but it does not prevent them.
+- This folder is now a git repository, but its first commit (`22368c5`) came after all results. So git does not show that the rules came before the results. `reports/freeze_manifest.json` shows later changes to frozen files, but it does not prevent them.

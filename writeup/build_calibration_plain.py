@@ -115,7 +115,7 @@ p.bullets([
     "<b>Simple option math.</b> We use a formula for European options, but these options are American, and dividends can matter. In a simulation, a dividend inside the option term made the volatility read from one option expiry too high by about 2% to 13%. The 30-day gauge is affected less. On real data, a later check did not change the main-study score. We did not run it for this study.",
     "<b>Wide option quotes.</b> Many quotes have a large gap between the buy price and the sell price. The gauge uses the middle of the gap and has no filter for wide gaps.",
     "<b>A small date mismatch.</b> Real windows average 29.35 days, not 30. With the real length, the inner rate is about 68.9%. The ATM30 price is from 15:45, and the move starts at the 16:00 close. A check with the 15:45 price changed little.",
-    "<b>No git history.</b> A hash shows if the sealed files changed, but the file dates cannot prove that the rules came first. You have the hash, and you can check it.",
+    "<b>No history of the order.</b> A hash shows if the sealed files changed. The project is now in git, but its first commit came after the results. So neither git nor the file dates can prove that the rules came first. You have the hash, and you can check it.",
 ])
 
 p.add("10. What is not done", "h1")

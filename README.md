@@ -102,16 +102,16 @@ Run these commands from this folder. Use the `py4fi` Python. Put code in script 
 
 ## References
 
-These references come from memory. Verify each one against the source before you cite it.
+All references were checked on 2026-11-11. Journal articles match Crossref records, Mincer and Zarnowitz matches the NBER record, and the Cboe document (version 5.0, revised 26 February 2026) matches the PDF. Politis and Romano (1992) has no online record, but three independent bibliographies give the same entry.
 
-- Cboe Global Markets. *Cboe Volatility Index: VIX Methodology* (white paper). The CBOE variance formula and the 30-day interpolation.
+- Cboe Global Markets. *Cboe Volatility Index Mathematics Methodology* (version of 11 September 2025; checked on the Cboe site on 2026-11-11). The CBOE variance formula and the 30-day interpolation.
 - Black, F. (1976). The pricing of commodity contracts. *Journal of Financial Economics* 3, 167–179.
 - Corsi, F. (2009). A simple approximate long-memory model of realized volatility. *Journal of Financial Econometrics* 7(2), 174–196.
 - Newey, W. K., and West, K. D. (1987). A simple, positive semi-definite, heteroskedasticity and autocorrelation consistent covariance matrix. *Econometrica* 55(3), 703–708.
 - Clark, T. E., and West, K. D. (2007). Approximately normal tests for equal predictive accuracy in nested models. *Journal of Econometrics* 138(1), 291–311.
 - Mincer, J., and Zarnowitz, V. (1969). The evaluation of economic forecasts. In J. Mincer (ed.), *Economic Forecasts and Expectations*. NBER.
 - Politis, D. N., and Romano, J. P. (1992). A circular block-resampling procedure for stationary data. In R. LePage and L. Billard (eds.), *Exploring the Limits of Bootstrap*. Wiley.
-- Carr, P., and Madan, D. (1998). Towering over the competition. *Risk* 11, 61–63.
+- Carr, P., and Madan, D. (1998). Towards a theory of volatility trading. In R. Jarrow (ed.), *Volatility: New Estimation Techniques for Pricing Derivatives*, Risk Books, 417–427. (Corrected: the earlier entry, "Towering over the competition", *Risk* 11, was not found. Check the page range against the source.)
 - Britten-Jones, M., and Neuberger, A. (2000). Option prices, implied price processes, and stochastic volatility. *Journal of Finance* 55(2), 839–866.
 - Jiang, G. J., and Tian, Y. S. (2005). The model-free implied volatility and its information content. *Review of Financial Studies* 18(4), 1305–1342.
 - Cox, J. C., Ross, S. A., and Rubinstein, M. (1979). Option pricing: a simplified approach. *Journal of Financial Economics* 7(3), 229–263. (Binomial tree used in `fixes/`.)
